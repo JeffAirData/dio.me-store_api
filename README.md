@@ -5,7 +5,7 @@ TDD é uma sigla para `Test Driven Development`, ou Desenvolvimento Orientado a 
 
 ### Ciclo do TDD
 1. **Red**: Escreva um teste que falhe
-2. **Green**: Escreva o código mínimo para passar no teste  
+2. **Green**: Escreva o código mínimo para passar no teste
 3. **Refactor**: Melhore o código mantendo os testes passando
 
 ### Vantagens do TDD

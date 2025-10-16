@@ -1,0 +1,42 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "${APP_PORT:-8000}:${APP_PORT:-8000}"
+    environment:
+      - DATABASE_URL=${DATABASE_URL}
+    env_file:
+      - .env
+    depends_on:
+      - db
+    volumes:
+      - .:/app
+    command: poetry run uvicorn store.main:app --host ${APP_HOST:-0.0.0.0} --port ${APP_PORT:-8000} --reload
+    networks:
+      - store_network
+
+  db:
+    image: 'bitnami/mongodb:latest'
+    container_name: "${COMPOSE_PROJECT_NAME:-store-api}_mongodb"
+    ports:
+      - "27017:27017"
+    environment:
+      - MONGODB_REPLICA_SET_MODE=${MONGODB_REPLICA_SET_MODE:-primary}
+      - MONGODB_ADVERTISED_HOSTNAME=${MONGODB_ADVERTISED_HOSTNAME:-localhost}
+      - ALLOW_EMPTY_PASSWORD=${ALLOW_EMPTY_PASSWORD:-yes}
+    volumes:
+      - mongodb_data:/bitnami/mongodb
+    networks:
+      - store_network
+
+volumes:
+  mongodb_data:
+    driver: local
+
+networks:
+  store_network:
+    driver: bridge

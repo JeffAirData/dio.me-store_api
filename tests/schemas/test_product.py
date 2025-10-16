@@ -4,15 +4,29 @@ from pydantic import ValidationError
 from store.schemas.product import ProductIn
 
 
-def test_schemas_validated():
-    product = ProductIn(
-        name="Iphone 14 pro Max", price=7999.99, quantity=10, status=True
-    )
+def test_schemas_return_success():
+    data = {
+        "name": "Iphone 14 pro Max",
+        "price": 7999.99,
+        "quantity": 10,
+        "status": True,
+    }
+    product = ProductIn.model_validate(data)
 
     assert product.name == "Iphone 14 pro Max"
     assert product.price == 7999.99
     assert product.quantity == 10
     assert product.status is True
+
+
+def test_schemas_return_raise():
+    # Teste com preço negativo - deve falhar na validação
+    data = {"name": "Iphone 14 pro Max", "price": -7999.99, "quantity": 10}
+    with pytest.raises(ValidationError) as err_info:
+        ProductIn.model_validate(data)
+
+    assert err_info.value.errors()[0]["type"] == "greater_than"
+    assert err_info.value.errors()[0]["loc"] == ("price",)
 
 
 def test_schemas_iphone_14_pro_max_complete():

@@ -7,6 +7,7 @@ class Settings(BaseSettings):
 
     # Database Configuration
     DATABASE_URL: str
+    DATABASE_NAME: str = "store"
 
     # MongoDB Configuration (optional fields used by Docker)
     MONGODB_REPLICA_SET_MODE: str = "primary"

@@ -1,10 +1,10 @@
+"""
+Router principal FastAPI
+Seguindo padrão da professora Nayanna Nara - DIO.me Store API
+"""
 from fastapi import APIRouter
 
-# Criar o roteador principal da API
-api_router = APIRouter()
+from store.controllers.product import router as product
 
-# Aqui serão incluídos os roteadores dos módulos
-# Exemplo:
-# api_router.include_router(
-#     product.router, prefix="/products", tags=["products"]
-# )
+api_router = APIRouter()
+api_router.include_router(product, prefix="/products")

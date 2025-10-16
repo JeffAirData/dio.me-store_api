@@ -41,7 +41,7 @@ TDD-PROJECT/
 name = "store-api"
 version = "0.1.0"
 description = "Store API com TDD"
-authors = ["Jeff Silva <jeff@example.com>"]
+authors = ["Jefferson Melo <jeffairdata@gmail.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.11"
@@ -1030,5 +1030,5 @@ Este código é livre para estudo e contribuições. Vamos juntos crescer na pro
 ---
 
 ### 📝 **Última Atualização:** Outubro 2025
-### 👨‍💻 **Autor:** Jeff Silva
+### 👨‍💻 **Autor:** Jefferson Melo
 ### 🎯 **Curso:** Desenvolvendo APIs Python com TDD - DIO.me

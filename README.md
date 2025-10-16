@@ -8,7 +8,7 @@
 
 ## 📋 Sobre o Desafio
 
-Este projeto foi desenvolvido como parte do curso **"Desenvolvendo APIs Python com TDD"** da **DIO.me**, ministrado pela professora **Nayanna Nara**. O desafio consistiu em implementar uma **Store API completa** utilizando **Test-Driven Development (TDD)**, seguindo as melhores práticas de desenvolvimento de APIs modernas.
+Este projeto foi desenvolvido como parte do curso **"Desenvolvendo APIs Python com TDD"** da **DIO.me**, ministrado pela professora **Nayanna Nara** durante o "BootCamp Vivo - Python AI Backend Developer". O desafio consistiu em implementar uma **Store API completa** utilizando **Test-Driven Development (TDD)**, seguindo as melhores práticas de desenvolvimento de APIs modernas.
 
 ### 🎯 Objetivos Alcançados
 
@@ -298,10 +298,10 @@ Para evolução futura do projeto:
 
 ## 👨‍💻 Autor
 
-**Jeff Silva** - *Full Stack Developer*
+**Jefferson O. Melo** - *Full Stack Developer*
 - 🌐 GitHub: [@JeffAirData](https://github.com/JeffAirData)
-- 💼 LinkedIn: [Jeff Silva](https://linkedin.com/in/jeff-silva)
-- 🎓 Estudante DIO.me - Bootcamp Python
+- 💼 LinkedIn: [Jeff Melo]([https://linkedin.com/in/jeff-silva](https://www.linkedin.com/in/jefferson-melo-8599b010/))
+- 🎓 Estudante DIO.me - "BootCamp Vivo - Python AI Backend Developer"
 
 ---
 
